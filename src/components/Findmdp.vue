@@ -49,7 +49,7 @@ export default {
   methods: {
     valide() {
       const correctUsername = "admin";
-      const correctPassword = "secret";
+      const correctPassword = "admin";
       if (
         this.username === correctUsername &&
         this.password === correctPassword

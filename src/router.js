@@ -3,6 +3,11 @@ import PageAccueil from './components/Accueil.vue';
 import Enigme1 from './components/Enigme1.vue';
 import Developpement from './components/Developpment.vue';
 import PageFindmdp from './components/Findmdp.vue';
+import Cybersecurite from './components/Cybersecurite.vue';
+import cyberqcm1 from './components/cyber/qcm1.vue';
+import cyberqcm2 from './components/cyber/qcm2.vue';
+import cyberqcm3 from './components/cyber/qcm3.vue';
+
 
 const routes =[
     {
@@ -24,8 +29,30 @@ const routes =[
         path: "/findmdp",
         name: "PageFindmdp",
         component: PageFindmdp
-    }
-
+    },
+    
+    
+    // cyber
+    {
+        path: "/Cybersecurite",
+        name: "PageCybersecurite",
+        component: Cybersecurite
+    },
+    {
+        path: "/cyberqcm1",
+        name: "PageCybersecuriteQCM1",
+        component: cyberqcm1
+    },
+    {
+        path: "/cyberqcm2",
+        name: "PageCybersecuriteQCM2",
+        component: cyberqcm2
+    },
+    {
+        path: "/cyberqcm3",
+        name: "PageCybersecuriteQCM3",
+        component: cyberqcm3
+    },
 ];
 
 const router = createRouter({
