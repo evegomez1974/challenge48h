@@ -56,8 +56,8 @@ export default {
     background-color: rgb(179, 238, 232);
 
     display: flex;
-    /* justify-content: center; */
-    justify-content: space-between;
+    justify-content: center;
+    /* justify-content: space-between; */
     align-items: center;
     color: black;
     font-weight: bold;
