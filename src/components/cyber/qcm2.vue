@@ -30,7 +30,7 @@
           class="mb-2"
         >
           <b-card-text>
-            Question No.{{ currentQuestion + 1 }} of {{ questions.length }}
+            Question No.{{ currentQuestion + 1 }} / {{ questions.length }}
           </b-card-text>
           <br />
           <b-progress
@@ -46,7 +46,10 @@
             >
           </b-card-text>
           <b-card-text>
-            {{ questions[currentQuestion].questionText }}
+            <span v-if="questions[currentQuestion].isImage">
+              <img src="{{ questions[currentQuestion].image }}" />
+            </span>
+            <span v-else>{{ questions[currentQuestion].questionText }}</span>
           </b-card-text>
           <div class="answer-section">
             <b-button
@@ -80,7 +83,8 @@ export default {
 
       questions: [
         {
-          questionText: "Which one is used for two-way binding?",
+          isImage: true,
+          image: "../../assets/trames.png",
           answerOptions: [
             { answerText: "v-on", isCorrect: false },
             { answerText: "v-bind", isCorrect: false },
@@ -90,6 +94,7 @@ export default {
         },
         {
           questionText: "Who is the creator of vueJS ?",
+          isImage: false,
           answerOptions: [
             { answerText: "Jeff Bezos", isCorrect: false },
             { answerText: "Elon Musk", isCorrect: false },
@@ -99,6 +104,7 @@ export default {
         },
         {
           questionText: "Vue is used in the backend. - True or False?",
+          isImage: false,
           answerOptions: [
             { answerText: "True", isCorrect: false },
             { answerText: "False", isCorrect: true },
@@ -106,6 +112,7 @@ export default {
         },
         {
           questionText: "Which version of Vue is Launched on 2020?",
+          isImage: false,
           answerOptions: [
             { answerText: "Vue 2", isCorrect: false },
             { answerText: "Vue 1", isCorrect: false },
@@ -115,6 +122,7 @@ export default {
         },
         {
           questionText: "Is vue an OpenSource Library?",
+          isImage: false,
           answerOptions: [
             { answerText: "True", isCorrect: true },
             { answerText: "False", isCorrect: false },
@@ -123,6 +131,7 @@ export default {
         {
           questionText:
             "Which of the following is a Full Javascript Frramework",
+          isImage: false,
           answerOptions: [
             { answerText: "Vue", isCorrect: false },
             { answerText: "node", isCorrect: false },
@@ -132,6 +141,7 @@ export default {
         },
         {
           questionText: "Composition API can be used on which version?",
+          isImage: false,
           answerOptions: [
             { answerText: "Vue 5", isCorrect: false },
             { answerText: "Vue 2 Only", isCorrect: false },
