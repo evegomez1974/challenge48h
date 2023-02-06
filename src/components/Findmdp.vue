@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="left">
-      <h1>Trouvez le bon identifiant et le bon mot de passe</h1>
+      <h1>Trouvez <br />le bon identifiant <br />et le bon mot de passe</h1>
     </div>
 
     <div class="right">
@@ -73,18 +73,19 @@ export default {
 }
 
 .left {
-  width: 30%;
+  width: 40%;
   background-color: #000;
 }
 
 h1 {
   color: #fff;
-  font-family: impact;
+  font-family: monospace;
+  font-weight: 800;
   height: 100%;
   display: flex;
   align-items: center;
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .right {
@@ -94,27 +95,38 @@ h1 {
   align-items: center;
   background-image: url("../assets/images.png");
   object-fit: contain;
+  justify-content: center;
+}
+
+form {
+  width: 50%;
 }
 
 input[type="text"] {
   display: block;
-  width: 90%;
+  width: 100%;
+  height: 20%;
   border: none;
+  border-radius: 14px;
   box-shadow: 0px 0px 10px 5px #ffffff;
 }
 
 input[type="password"] {
   display: block;
-  width: 90%;
+  width: 100%;
+  height: 20%;
   border: none;
+  border-radius: 14px;
   box-shadow: 0px 0px 10px 5px #ffffff;
 }
 
 label {
   display: block;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-family: impact;
+  font-size: 20px;
+  color: #ffffff6b;
 }
 
 #incorrect {
@@ -129,5 +141,6 @@ label {
 
 input::-webkit-input-placeholder {
   color: #d3d3d3;
+  padding-left: 50%;
 }
 </style>
