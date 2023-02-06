@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import PageAccueil from './components/Accueil.vue';
-import PageTestMaGueule from './components/PageTestMaGueule.vue';
+import PageTestMaGueule from './components/Enigme1.vue';
 
 const routes =[
     {
@@ -9,8 +9,8 @@ const routes =[
         component: PageAccueil
     },
     {
-        path: "/BestPage",
-        name: "BestPage",
+        path: "/Enigme1",
+        name: "Enigme1",
         component: PageTestMaGueule
     }
 ];

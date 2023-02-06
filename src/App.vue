@@ -1,8 +1,6 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <Accueil msg="Welcome to Your Vue.js App"/>
   <router-link to="/Accueil">Accueil</router-link>
-  <router-link to="/BestPage">Oui</router-link>
+  <router-link to="/Enigme1">Enigme1</router-link>
   <router-view />
 </template>
 
