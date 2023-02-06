@@ -1,17 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <Accueil msg="Welcome to Your Vue.js App"/>
-  <router-view />
+  <div class="hello">
+    <img alt="Vue logo" src="../assets/logo.png">
+    <a href="https://www.facebook.com/" >Essaie pour voir</a>
+  </div>
 </template>
 
 <script>
-import Accueil from './components/Accueil.vue'
-
 export default {
-  name: 'App',
-  components: {
-    Accueil
-  }
+  name: 'PageAccueil',
 }
 </script>
 
