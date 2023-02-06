@@ -1,30 +1,22 @@
 <template>
   <div>
     <nav>
-      <div class="navFirstBlock"><p>Ynov challenge</p></div>
+      <div class="navFirstBlock"><p>Developpment</p></div>
     </nav>
 
     <section>
 
       <div class="welcomeSentence">
-        <div>
+        <!-- <div>
           <h3>Bonjour Inspecteur</h3>
           <p>Trois dossiers se trouvent devant toi, choisis l'enquête qui t'intéresses.</p>
-        </div>
+        </div> -->
       </div>
       
-      <div class="buttonsDiv ta-c padT150 padB150">
+    <div class="buttonsDiv ta-c padT150 padB150">
         <div class="card">
-          <router-link  to="/Developpment"><button class="button accept-btn"  onclick="addAnimation2()">Developpment</button></router-link>
-      </div>
-      
-      <div class="card">
-        <router-link  to="/#"><button class="button accept-btn"  onclick="addAnimation2()">Infrastructures</button></router-link>
-      </div>
-      
-      <div class="card">
-        <router-link  to="/#"><button class="button accept-btn"  onclick="addAnimation2()">Cybersécurité</button></router-link>
-      </div>
+          <router-link  to="/Enigme1"><button class="button accept-btn"  onclick="addAnimation2()">Enigme 1</button></router-link>
+        </div>
     </div>
     
   </section>
@@ -34,15 +26,12 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'PageDeveloppment'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
   * {
     margin: 0;
     padding: 0;
@@ -56,8 +45,8 @@ export default {
     background-color: rgb(179, 238, 232);
 
     display: flex;
-    /* justify-content: center; */
-    justify-content: space-between;
+    justify-content: center;
+    /* justify-content: space-between; */
     align-items: center;
     color: black;
     font-weight: bold;
