@@ -1,19 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <Accueil msg="Welcome to Your Vue.js App"/>
   <router-link to="/Accueil">Accueil</router-link>
-  <router-link to="/BestPage">Oui</router-link>
+  <hr />
+  <router-link to="/BestPage">Best</router-link>
+  <hr />
+  <router-link to="/findmdp">Mot de passe</router-link>
   <router-view />
 </template>
 
 <script>
-
 export default {
-  name: 'App',
-  components: {
-  
-  }
-}
+  name: "App",
+  components: {},
+};
 </script>
 
 <style>
