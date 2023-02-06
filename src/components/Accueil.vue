@@ -7,9 +7,9 @@
     <section>
       <div class="welcomeSentence">
         <div>
-          <h3>Bonjour Inspecteur</h3>
+          <h3>Bonjour,</h3>
           <p>
-            Trois dossiers se trouvent devant toi, choisis l'enquête qui
+            Deux dossiers se trouvent devant toi, choisis la catégorie qui
             t'intéresses.
           </p>
         </div>
@@ -19,7 +19,8 @@
         <div class="card">
           <router-link to="/Cybersecurite"
             ><button class="button accept-btn" onclick="addAnimation2()">
-              Cybersécurité
+              Cybersécurité /<br />
+              Infra
             </button></router-link
           >
         </div>
@@ -35,7 +36,8 @@
     </section>
 
     <div class="footer">
-      <p>faire un footer</p>
+      <span>Challenge 48h</span>
+      <span>Réaliser par des étudiants d'Ynov</span>
     </div>
   </div>
 </template>
@@ -97,6 +99,10 @@ section div {
   background-color: lightgrey;
   width: 100%;
   height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .returnButton {
