@@ -3,7 +3,7 @@ import PageAccueil from './components/Accueil.vue';
 
 const routes =[
     {
-        path: "/Accueil",
+        path: "/",
         name: "PageAccueil",
         component: PageAccueil
     }
