@@ -7,32 +7,55 @@
   </nav>
   <div class="d-flex justify-content-center">
     <div v-if="showScore">
-      <b-card title="Results" style="max-width: 20rem">
-        You Scored {{ score }} of {{ questions.length }}
-      </b-card>
+      <h5 title="Results" style="font-size: 20px; margin-top: 10px">
+        Votre total de points est : {{ score }} / {{ questions.length }}
+      </h5>
     </div>
     <div class="card-q" v-else>
-      <span v-if="!startQuiz">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-          voluptates, soluta culpa facere inventore ab. Hic similique itaque
-          corrupti voluptates eum aspernatur, ab explicabo tempora amet
-          expedita, mollitia sapiente harum?
+      <span
+        v-if="!startQuiz"
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 5rem;
+        "
+      >
+        <p style="width: 700px; font-size: 20px">
+          Vous allez commencer un QCM de 5 questions au total portant sur le
+          sujet des trames réseau.<br />Vous aurez uniquement 20 secondes par
+          question pour y répondre !!<br />Quand vous être prêt(e) cliquer sur
+          le bouton "Démarrer le quiz"
         </p>
         <button class="button accept-btn" @click="startQuizFunc()">
-          Start Quiz
+          Démarrer le quiz
         </button>
       </span>
       <span v-else>
-        <b-card
-          title="Simple Quiz Application"
-          style="max-width: 20rem"
-          class="mb-2"
-        >
+        <img
+          src="../../assets/trame1.png"
+          alt=""
+          style="width: 50%; object-fit: contain"
+        />
+
+        <br />
+
+        <b-card style="max-width: 20rem" class="mb-2">
+          <b-card-text>
+            <span style="font-size: 40px"
+              ><strong>{{ countDown }} </strong></span
+            >
+          </b-card-text>
+
+          <br />
+
           <b-card-text>
             Question No.{{ currentQuestion + 1 }} / {{ questions.length }}
           </b-card-text>
+
           <br />
+          <hr />
+
           <b-progress
             variant="warning"
             :max="30"
@@ -40,26 +63,20 @@
             height="4px"
           ></b-progress>
 
-          <b-card-text>
-            <span style="font-size: 40px"
-              ><strong>{{ countDown }} </strong></span
-            >
-          </b-card-text>
-          <b-card-text>
-            <span v-if="questions[currentQuestion].isImage">
-              <img src="{{ questions[currentQuestion].image }}" />
-            </span>
-            <span v-else>{{ questions[currentQuestion].questionText }}</span>
-          </b-card-text>
+          <h5 style="font-size: 20px; margin-bottom: 10px">
+            {{ questions[currentQuestion].questionText }}
+          </h5>
+
           <div class="answer-section">
-            <b-button
+            <span
+              style="font-size: 20px; margin-bottom: 20px"
               :key="index"
               v-for="(option, index) in questions[currentQuestion]
                 .answerOptions"
               @click="handleAnswerClick(option.isCorrect)"
               class="ans-option-btn"
               variant="primary"
-              >{{ option.answerText }}</b-button
+              >{{ option.answerText }}</span
             >
           </div>
         </b-card>
@@ -77,76 +94,55 @@ export default {
       currentQuestion: 0,
       showScore: false,
       score: 0,
-      countDown: 30,
+      countDown: 20,
       timer: null,
       startQuiz: false,
 
       questions: [
         {
-          isImage: true,
-          image: "../../assets/trames.png",
+          questionText:
+            "Quel est le protocole réseau utilisé pour réaliser l’échange de ces trames?",
           answerOptions: [
-            { answerText: "v-on", isCorrect: false },
-            { answerText: "v-bind", isCorrect: false },
-            { answerText: "v-model", isCorrect: true },
-            { answerText: "v-if", isCorrect: false },
-          ],
-        },
-        {
-          questionText: "Who is the creator of vueJS ?",
-          isImage: false,
-          answerOptions: [
-            { answerText: "Jeff Bezos", isCorrect: false },
-            { answerText: "Elon Musk", isCorrect: false },
-            { answerText: "Evan You", isCorrect: true },
-            { answerText: "Tony Stark", isCorrect: false },
-          ],
-        },
-        {
-          questionText: "Vue is used in the backend. - True or False?",
-          isImage: false,
-          answerOptions: [
-            { answerText: "True", isCorrect: false },
-            { answerText: "False", isCorrect: true },
-          ],
-        },
-        {
-          questionText: "Which version of Vue is Launched on 2020?",
-          isImage: false,
-          answerOptions: [
-            { answerText: "Vue 2", isCorrect: false },
-            { answerText: "Vue 1", isCorrect: false },
-            { answerText: "Vue 4", isCorrect: false },
-            { answerText: "Vue 3", isCorrect: true },
-          ],
-        },
-        {
-          questionText: "Is vue an OpenSource Library?",
-          isImage: false,
-          answerOptions: [
-            { answerText: "True", isCorrect: true },
-            { answerText: "False", isCorrect: false },
+            { answerText: "IPv4", isCorrect: true },
+            { answerText: "ARP", isCorrect: false },
+            { answerText: "IPv6", isCorrect: false },
+            { answerText: "IEEE 802.1Q", isCorrect: false },
           ],
         },
         {
           questionText:
-            "Which of the following is a Full Javascript Frramework",
-          isImage: false,
+            "Quelle est l’adresse réseau de la machine ayant initié l’échange ?",
           answerOptions: [
-            { answerText: "Vue", isCorrect: false },
-            { answerText: "node", isCorrect: false },
-            { answerText: "react", isCorrect: false },
-            { answerText: "Angular", isCorrect: true },
+            { answerText: "75.da.9c.7a", isCorrect: false },
+            { answerText: "6f.5e.9b.08", isCorrect: false },
+            { answerText: "84.e3.3d.17", isCorrect: true },
+            { answerText: "00.00.00.00", isCorrect: false },
           ],
         },
         {
-          questionText: "Composition API can be used on which version?",
-          isImage: false,
+          questionText: "Quelle est sa classe d’adresse ?",
           answerOptions: [
-            { answerText: "Vue 5", isCorrect: false },
-            { answerText: "Vue 2 Only", isCorrect: false },
-            { answerText: "Vue 3 Only", isCorrect: false },
-            { answerText: "Both Vue 2 and Vue 3", isCorrect: true },
+            { answerText: "Classe A", isCorrect: false },
+            { answerText: "Classe B", isCorrect: true },
+            { answerText: "Classe C", isCorrect: false },
+          ],
+        },
+        {
+          questionText:
+            "Quelle est l’adresse physique de la machine ayant initié l’échange ?",
+          answerOptions: [
+            { answerText: "00:00:00:00:00:00", isCorrect: false },
+            { answerText: "75:da:9c:7a:00:00", isCorrect: false },
+            { answerText: "82:ae:84:e3:3d:17", isCorrect: false },
+            { answerText: "00:01:02:6f:5e:9b", isCorrect: true },
+          ],
+        },
+        {
+          questionText: "Quelle est sa classe d’adresse ?",
+          answerOptions: [
+            { answerText: "Classe A", isCorrect: false },
+            { answerText: "Classe B", isCorrect: false },
+            { answerText: "Classe C", isCorrect: true },
           ],
         },
       ],
@@ -169,7 +165,7 @@ export default {
         // this.$store.state.questionAttended = this.currentQuestion;
         // localStorage.setItem('qattended', this.currentQuestion)
 
-        this.countDown = 30;
+        this.countDown = 20;
         this.countDownTimer();
       } else {
         // localStorage.removeItem('qattended')

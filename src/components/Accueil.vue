@@ -163,7 +163,7 @@ section div {
 .button {
   width: 250px;
   height: 150px;
-  font-size: 11px;
+  font-size: 18px;
   letter-spacing: 2.5px;
   font-weight: 500;
   color: #000;
