@@ -65,7 +65,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   display: flex;
   width: 100%;
@@ -114,18 +114,6 @@ label {
   display: block;
   margin-top: 20px;
   margin-bottom: 10px;
-  font-family: impact;
-}
-
-button {
-  margin-top: 40px;
-  border: none;
-  padding: 8px 40px;
-  background: #5dd45d;
-  letter-spacing: 2px;
-  color: #fff;
-  border-radius: 14px;
-  cursor: pointer;
   font-family: impact;
 }
 
