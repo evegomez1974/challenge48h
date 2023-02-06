@@ -5,6 +5,7 @@
   <nav>
     <div class="navFirstBlock"><p>Cybersécurité - QCM intermédiaire</p></div>
   </nav>
+
   <div class="d-flex justify-content-center">
     <div v-if="showScore">
       <h5 title="Results" style="font-size: 20px; margin-top: 10px">
@@ -22,13 +23,14 @@
         "
       >
         <p style="width: 700px; font-size: 20px">
-          Vous allez commencer un QCM de 5 questions au total portant sur le
-          sujet des trames réseau.<br />Vous aurez uniquement 20 secondes par
-          question pour y répondre !!<br />Quand vous être prêt(e) cliquer sur
-          le bouton "Démarrer le quiz"
+          Vous commencerez un QCM de 5 questions au total sur le thème des
+          trames de réseau.<br /><br />
+          Vous aurez seulement 20 secondes pour répondre à chacune des
+          questions!<br /><br />
+          Quand vous êtes prêt, cliquez sur le bouton "Commencer le quiz"
         </p>
         <button class="button accept-btn" @click="startQuizFunc()">
-          Démarrer le quiz
+          Commencer le quiz
         </button>
       </span>
       <span v-else>
