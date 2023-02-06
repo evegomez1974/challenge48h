@@ -74,7 +74,7 @@ export default {
 
 .left {
   width: 30%;
-  background-color: orange;
+  background-color: #000;
 }
 
 h1 {
@@ -84,22 +84,30 @@ h1 {
   display: flex;
   align-items: center;
   text-align: center;
+  font-size: 20px;
 }
 
 .right {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  align-items: center;
+  background-image: url("../assets/images.png");
+  object-fit: contain;
 }
 
 input[type="text"] {
   display: block;
-  width: 250%;
+  width: 90%;
+  border: none;
+  box-shadow: 0px 0px 10px 5px #ffffff;
 }
 
 input[type="password"] {
   display: block;
-  width: 250%;
+  width: 90%;
+  border: none;
+  box-shadow: 0px 0px 10px 5px #ffffff;
 }
 
 label {
