@@ -1,13 +1,14 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import PageAccueil from './components/Accueil.vue';
-import Enigme1 from './components/Enigme1.vue';
+import EnigmeCastle from './components/EnigmeCastle.vue';
+import CastleWalls from './components/CastleWalls.vue';
+import TreasureRoom from './components/TreasureRoom.vue';
 import Developpement from './components/Developpment.vue';
 import PageFindmdp from './components/Findmdp.vue';
 import Cybersecurite from './components/Cybersecurite.vue';
 import cyberqcm1 from './components/cyber/qcm1.vue';
 import cyberqcm2 from './components/cyber/qcm2.vue';
 import cyberqcm3 from './components/cyber/qcm3.vue';
-
 
 const routes =[
     {
@@ -16,9 +17,14 @@ const routes =[
         component: PageAccueil
     },
     {
-        path: "/Enigme1",
-        name: "Enigme1",
-        component: Enigme1
+        path: "/EnigmeCastle",
+        name: "EnigmeCastle",
+        component: EnigmeCastle
+    },
+    {
+        path: "/CastleWalls",
+        name: "CastleWalls",
+        component: CastleWalls
     },
     {
         path: "/Developpment",
@@ -30,7 +36,11 @@ const routes =[
         name: "PageFindmdp",
         component: PageFindmdp
     },
-    
+    {
+        path: "/TreasureRoom",
+        name: "TreasureRoom",
+        component: TreasureRoom
+    },
     
     // cyber
     {

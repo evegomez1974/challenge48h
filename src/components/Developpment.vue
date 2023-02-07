@@ -15,7 +15,7 @@
       
     <div class="buttonsDiv ta-c padT150 padB150">
         <div class="card">
-          <router-link  to="/Enigme1"><button class="button accept-btn"  onclick="addAnimation2()">Enigme dossier</button></router-link>
+          <router-link  to="/EnigmeCastle"><button class="button accept-btn"  onclick="addAnimation2()">Enigme du château</button></router-link>
         </div>
 
         <div class="card">
