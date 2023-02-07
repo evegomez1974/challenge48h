@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="div_container">
     <nav>
       <div class="navFirstBlock"><p>Ynov challenge</p></div>
     </nav>
@@ -7,8 +7,8 @@
     <section>
       <div class="welcomeSentence">
         <div>
-          <h3>Bonjour,</h3>
-          <p>
+          <h3 class="font-color">Bonjour,</h3>
+          <p class="font-color">
             Deux dossiers se trouvent devant toi, choisis la catégorie qui
             t'intéresses.
           </p>
@@ -87,6 +87,7 @@ nav {
 }
 
 section {
+  height: 50vh;
   margin: 0 5%;
   margin-top: 3rem;
 }
@@ -103,6 +104,8 @@ section div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: fixed;
+  bottom: 0;
 }
 
 .returnButton {
@@ -120,7 +123,7 @@ section div {
   padding: 0;
   width: 100%;
   max-width: 100%;
-  height: 300px;
+  height: 40vh;
   max-height: 500px;
   overflow-y: auto;
   display: flex;
@@ -216,6 +219,14 @@ section div {
   background-color: lightgray !important;
   box-shadow: none !important;
   transform: none !important;
+}
+
+.font-color {
+  color: black;
+}
+
+.div_container {
+  height: 100vh;
 }
 /* Fin animation des boutons */
 </style>

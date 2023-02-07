@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <button @click="showDialog">Click here!</button>
+    <button class="button_enigme" @click="showDialog">Click here!</button>
 
-    <p>admin</p>
-    <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+    <p class="paragraphe">admin</p>
+    <p class="paragraphe">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
   </div>
 </template>
 
@@ -49,7 +49,7 @@ export default {
   background-color: #000;
 }
 
-button {
+.button_enigme {
   margin: auto;
   margin-top: 200px;
   padding: 15px 40px;
@@ -60,9 +60,8 @@ button {
   font-weight: 800;
 }
 
-p {
+.paragraphe {
   color: #000;
-
   margin-top: 200px;
 }
 </style>
