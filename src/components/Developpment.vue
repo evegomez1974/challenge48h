@@ -5,31 +5,44 @@
     </nav>
 
     <section>
-
       <div class="welcomeSentence">
         <!-- <div>
           <h3>Bonjour Inspecteur</h3>
           <p>Trois dossiers se trouvent devant toi, choisis l'enquête qui t'intéresses.</p>
         </div> -->
       </div>
-      
-    <div class="buttonsDiv ta-c padT150 padB150">
+
+      <div class="buttonsDiv ta-c padT150 padB150">
         <div class="card">
-          <router-link  to="/Enigme1"><button class="button accept-btn"  onclick="addAnimation2()">Enigme dossier</button></router-link>
+          <router-link to="/Enigme1"
+            ><button class="button accept-btn" onclick="addAnimation2()">
+              Enigme dossier
+            </button></router-link
+          >
         </div>
 
         <div class="card">
-          <router-link  to="/findmdp"><button class="button accept-btn"  onclick="addAnimation2()">Enigme mot de passe</button></router-link>
+          <router-link to="/findmdp"
+            ><button class="button accept-btn" onclick="addAnimation2()">
+              Enigme mot de passe 1
+            </button></router-link
+          >
         </div>
-    </div>
-    
-  </section>
 
+        <div class="card">
+          <router-link to="/nativecode"
+            ><button class="button accept-btn" onclick="addAnimation2()">
+              Enigme mot de passe 2
+            </button></router-link
+          >
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PageDeveloppment'
-}
+  name: "PageDeveloppment",
+};
 </script>

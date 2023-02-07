@@ -3,6 +3,8 @@ import PageAccueil from './components/Accueil.vue';
 import Enigme1 from './components/Enigme1.vue';
 import Developpement from './components/Developpment.vue';
 import PageFindmdp from './components/Findmdp.vue';
+import PageNativeCode from './components/NativeCode.vue';
+
 import Cybersecurite from './components/Cybersecurite.vue';
 import cyberqcm1 from './components/cyber/qcm1.vue';
 import cyberqcm2 from './components/cyber/qcm2.vue';
@@ -29,6 +31,11 @@ const routes =[
         path: "/findmdp",
         name: "PageFindmdp",
         component: PageFindmdp
+    },
+    {
+        path: "/nativecode",
+        name: "PageNativeCode",
+        component: PageNativeCode
     },
     
     
