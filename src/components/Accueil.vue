@@ -25,6 +25,14 @@
         </div>
 
         <div class="card">
+          <router-link to="/debut"
+            ><button class="button accept-btn" onclick="addAnimation2()">
+              Algorithmes
+            </button></router-link
+          >
+        </div>
+
+        <div class="card">
           <router-link to="/Developpment"
             ><button class="button accept-btn" onclick="addAnimation2()">
               Developpement

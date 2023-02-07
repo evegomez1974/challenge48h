@@ -8,6 +8,10 @@ import cyberqcm1 from './components/cyber/qcm1.vue';
 import cyberqcm2 from './components/cyber/qcm2.vue';
 import cyberqcm3 from './components/cyber/qcm3.vue';
 
+import PageDebutAventure from './components/DebutAventure.vue';
+import PageAventure from './components/aventure/Aventure.vue';
+import PageSauve from './components/aventure/sauve.vue';
+
 
 const routes =[
     {
@@ -52,6 +56,22 @@ const routes =[
         path: "/cyberqcm3",
         name: "PageCybersecuriteQCM3",
         component: cyberqcm3
+    },
+    // AventureDev
+    {
+        path: "/aventure",
+        name: "PageAventure",
+        component: PageAventure
+    },
+    {
+        path: "/debut",
+        name: "PageDebutAventure",
+        component: PageDebutAventure
+    },
+    {
+        path: "/sauve",
+        name: "PageSauve",
+        component: PageSauve
     },
 ];
 
