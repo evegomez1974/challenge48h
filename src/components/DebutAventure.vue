@@ -4,7 +4,7 @@
         <router-link to="/"><span>⬅︎ Retour</span></router-link>
       </div>
       <nav>
-        <div class="navFirstBlock"><p>Un problème de développement</p></div>
+        <div class="navFirstBlock"><p>Un problème d'algo</p></div>
       </nav>
   
       <section>
@@ -13,6 +13,7 @@
             <h3>Attention</h3>
             <p>Pour cette série de petits casse-têtes, il est conseillé de résoudre les énigmes grâce à des fonctions créées en JS.</p>
             <p>Si tu as besoin d'un interpreteur en ligne, <a class="lienBeau" href="https://playcode.io/javascript">CELUI-LA</a> est sympathique</p>
+            <p>Garde bien tes fonctions au chaud, elles peuvent resservir</p>
           </div> 
         </div>
   

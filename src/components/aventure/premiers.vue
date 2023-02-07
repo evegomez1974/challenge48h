@@ -11,18 +11,14 @@
     <div id="app">
         <div id="contain">
             <div id="questions">
-                Ouf, ni vu ni connu vous donnez vos résultats à votre chef, qui ne jette même pas un regard à votre
-                rapport.
-
-                Vous retournez à votre bureau, soupirez et choisissez le dernier dossier de la pile.<br />
-                Une sombre affaire celui-là... <br />
-                Dedans, vous avez une liste de témoignages avec les numéros des suspects. Quel suspect apparait le plus
-                de fois ?
-                (s'il y en a plusieurs, on commencera par celui qui a le numéro le plus bas)
+                C'est la dernière ligne droite : grace à de nouveaux indices, un nouveau tri des suspects peut être
+                effectué. <br />
+                Tous ceux n'ayant pas un nombre premier pour numéro sont innocents ! Combien reste-t-il de valeurs dans
+                la liste ?
             </div>
 
             <form @submit.prevent="valide">
-                <label class="answer" for="reponse">Suspects Identifiés = {{ tableauSus }}</label>
+                <label class="answer" for="reponse">{{ tabPrems }}</label>
                 <div class="centrer">
                     <input class="inputBeau" type="text" id="reponse" v-model="reponse" placeholder="?" />
                 </div>
@@ -31,12 +27,12 @@
 
 
             <div v-if="showMessageIncorrect">
-                <p id="incorrect">Je ne pense pas que ça soit la bonne réponse....</p>
+                <p id="incorrect">Je ne pense pas que ça soit la bonne réponse...</p>
             </div>
 
             <div v-if="showMessageCorrect">
                 <p id="correct">OH MAIS OUI, C'EST ÇA, BIEN JOUÉ ! Passons à <br /><button class="button"><router-link
-                            to="/message"><span>LA SUITE</span></router-link></button></p>
+                            to="/suspectDevoile"><span>LA SUITE</span></router-link></button></p>
             </div>
         </div>
     </div>
@@ -46,45 +42,31 @@
 //import { Console } from 'console';
 
 export default {
-    name: "PageSauve",
+    name: "PagePrems",
     data() {
         return {
             reponse: "",
             showMessageIncorrect: false,
             showMessageCorrect: false,
 
-            tableauSus: Array.from({ length: 50 }, () => Math.floor(Math.random() * 100 + 1)),
+            tabPrems: Array.from({ length: 150 }, () => Math.floor(Math.random() * 250 + 1)),
         };
     },
     methods: {
+        nbrPremier(nbr) {
+            for (var i = 2; i < nbr; i++)
+                if (nbr % i === 0) return false;
+            return nbr > 1;
+        },
         valide() {
-            var mode = a => {
-                a = a.slice().sort((x, y) => x - y);
-
-                var bestStreak = 1;
-                var bestElem = a[0];
-                var currentStreak = 1;
-                var currentElem = a[0];
-
-                for (let i = 1; i < a.length; i++) {
-                    if (a[i - 1] !== a[i]) {
-                        if (currentStreak > bestStreak) {
-                            bestStreak = currentStreak;
-                            bestElem = currentElem;
-                        }
-
-                        currentStreak = 0;
-                        currentElem = a[i];
-                    }
-
-                    currentStreak++;
+            var newTab = []
+            for (var i = 0; i < this.tabPrems.length; i++) {
+                if (this.nbrPremier(this.tabPrems[i])) {
+                    newTab.push(this.tabPrems[i])
                 }
-
-                return currentStreak > bestStreak ? currentElem : bestElem;
-            };
-            //console.log(mode(this.tableauSus))
-            const correctAnswer = mode(this.tableauSus).toString();
-            //console.log(somme);
+            }
+            const correctAnswer = newTab.length.toString();
+            //console.log(correctAnswer);
             if (
                 this.reponse === correctAnswer
             ) {
@@ -122,7 +104,7 @@ export default {
 
 .answer {
     display: block;
-    max-height: 150px;
+    max-height: 250px;
     background-color: #c1ebe8;
     color: black;
     margin-bottom: 10px;
