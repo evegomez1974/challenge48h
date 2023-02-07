@@ -22,7 +22,7 @@
           margin-top: 5rem;
         "
       >
-        <p style="width: 700px; font-size: 20px">
+        <p class="font-color" style="width: 700px; font-size: 20px">
           Vous commencerez un QCM de 5 questions au total sur le thème des
           trames de réseau.<br /><br />
           Vous aurez seulement 20 secondes pour répondre à chacune des

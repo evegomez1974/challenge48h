@@ -44,6 +44,10 @@
         </div>
       </div>
     </section>
+    <div class="footer">
+      <span>Challenge 48h</span>
+      <span>Réaliser par des étudiants d'Ynov</span>
+    </div>
   </div>
 </template>
 
