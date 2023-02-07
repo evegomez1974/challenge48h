@@ -28,27 +28,27 @@
       />
       <img
         class="indice2"
-        src="../assets/emplacements/emplacement1.png"
+        src="../assets/emplacements/emplacement2.png"
         alt="test"
       />
       <img
         class="indice3"
-        src="../assets/emplacements/emplacement1.png"
+        src="../assets/emplacements/emplacement3.png"
         alt="test"
       />
       <img
         class="indice4"
-        src="../assets/emplacements/emplacement1.png"
+        src="../assets/emplacements/emplacement4.png"
         alt="test"
       />
       <img
         class="indice5"
-        src="../assets/emplacements/emplacement1.png"
+        src="../assets/emplacements/emplacement5.png"
         alt="test"
       />
       <img
         class="indice6"
-        src="../assets/emplacements/emplacement1.png"
+        src="../assets/emplacements/emplacement6.png"
         alt="test"
       />
     </div>
