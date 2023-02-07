@@ -33,9 +33,12 @@
         </div>
 
         <div class="card">
-          <router-link to="/cyberqcm3"
-            ><button class="button accept-btn" onclick="addAnimation2()">
-              Quiz niveau expert
+          <router-link to="/Cybersecurite"
+            ><button
+              class="button btn-disabled accept-btn"
+              onclick="addAnimation2()"
+            >
+              Prochainement...<br />Quiz niveau expert
             </button></router-link
           >
         </div>

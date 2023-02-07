@@ -47,11 +47,12 @@
 
       <div id="result" v-show="show == true">
         <div>
-          Result:
+          Votre total de points est :
           {{
             questions.filter((question) => question.picked == question.correct)
               .length
-          }}/{{ questions.length }} correct answers
+          }}
+          / {{ questions.length }}
         </div>
         <button
           @click="
@@ -60,7 +61,7 @@
             questions.forEach((question) => (question.picked = -1));
           "
         >
-          Reset
+          Recommencer
         </button>
       </div>
     </div>
