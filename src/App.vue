@@ -16,13 +16,11 @@ export default {
     toggle() {
       this.awesome = !this.awesome
     },
-
-  }
+  },
 }
 </script>
 
 <template>
-  <h1>Make me red</h1>
   <button @click="increment">count is: {{ count }}</button>
   <input :value="text" @input="onInput" placeholder="Type here">
   <p>{{ text }}</p>
