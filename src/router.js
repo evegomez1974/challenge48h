@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import PageAccueil from './components/Accueil.vue';
 import EnigmeCastle from './components/EnigmeCastle.vue';
 import CastleWalls from './components/CastleWalls.vue';
-import TreasureRoom from './components/TreasureRoom.vue';
+import TreasuresRoom from './components/TreasureRoom.vue';
 import Developpement from './components/Developpment.vue';
 import PageFindmdp from './components/Findmdp.vue';
 import Cybersecurite from './components/Cybersecurite.vue';
@@ -37,9 +37,9 @@ const routes =[
         component: PageFindmdp
     },
     {
-        path: "/TreasureRoom",
-        name: "TreasureRoom",
-        component: TreasureRoom
+        path: "/TreasuresRoom",
+        name: "TreasuresRoom",
+        component: TreasuresRoom
     },
     
     // cyber
