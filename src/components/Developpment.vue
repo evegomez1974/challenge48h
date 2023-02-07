@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="returnButton">
+      <router-link to="/"><span>⬅︎ Retour</span></router-link>
+    </div>
     <nav>
       <div class="navFirstBlock"><p>Developpment</p></div>
     </nav>
@@ -14,7 +17,11 @@
 
       <div class="buttonsDiv ta-c padT150 padB150">
         <div class="card">
-          <router-link  to="/EnigmeCastle"><button class="button accept-btn"  onclick="addAnimation2()">Enigme du château</button></router-link>
+          <router-link to="/EnigmeCastle"
+            ><button class="button accept-btn" onclick="addAnimation2()">
+              Enigme du château
+            </button></router-link
+          >
         </div>
 
         <div class="card">
@@ -35,7 +42,7 @@
       </div>
     </section>
 
-        <div class="footer">
+    <div class="footer">
       <span>Challenge 48h</span>
       <span>Réaliser par des étudiants d'Ynov</span>
     </div>

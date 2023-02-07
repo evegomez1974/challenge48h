@@ -9,7 +9,7 @@
         <div>
           <h3 class="font-color">Bonjour,</h3>
           <p class="font-color">
-            Deux dossiers se trouvent devant toi, choisis la catégorie qui
+            Trois dossiers se trouvent devant toi, choisis la catégorie qui
             t'intéresses.
           </p>
         </div>
@@ -21,6 +21,14 @@
             ><button class="button accept-btn" onclick="addAnimation2()">
               Cybersécurité /<br />
               Infra
+            </button></router-link
+          >
+        </div>
+
+        <div class="card">
+          <router-link to="/debut"
+            ><button class="button accept-btn" onclick="addAnimation2()">
+              Algorithmes
             </button></router-link
           >
         </div>

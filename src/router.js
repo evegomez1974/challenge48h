@@ -13,6 +13,18 @@ import cyberqcm1 from './components/cyber/qcm1.vue';
 import cyberqcm2 from './components/cyber/qcm2.vue';
 import cyberqcm3 from './components/cyber/qcm3.vue';
 
+import PageDebutAventure from './components/DebutAventure.vue';
+import PageAventure from './components/aventure/Aventure.vue';
+import PageSauve from './components/aventure/sauve.vue';
+import PageMessage from './components/aventure/message.vue';
+import PageNegatifs from './components/aventure/negatifs.vue';
+import PagesuspectDevoile from './components/aventure/suspectDevoile.vue';
+import PageGGBGTATROUVELESUS from './components/aventure/GGBGTATROUVELESUS.vue';
+import PageCoffeeShop from './components/aventure/CoffeeShop.vue';
+import PagePrems from './components/aventure/premiers.vue';
+import Page504A from './components/aventure/Page504.vue';
+
+
 const routes =[
     {
         path: "/",
@@ -76,6 +88,57 @@ const routes =[
         path: "/cyberqcm3",
         name: "PageCybersecuriteQCM3",
         component: cyberqcm3
+    },
+    // AventureDev
+    {
+        path: "/aventure",
+        name: "PageAventure",
+        component: PageAventure
+    },
+    {
+        path: "/debut",
+        name: "PageDebutAventure",
+        component: PageDebutAventure
+    },
+    {
+        path: "/sauve",
+        name: "PageSauve",
+        component: PageSauve
+    },
+    {
+        path: "/message",
+        name: "PageMessage",
+        component: PageMessage
+    },
+    {
+        path: "/negatifs",
+        name: "PageNegatifs",
+        component: PageNegatifs
+    },
+    {
+        path: "/suspectDevoile",
+        name: "PagesuspectDevoile",
+        component: PagesuspectDevoile
+    },
+    {
+        path: "/GGBGTATROUVELESUS",
+        name: "PageGGBGTATROUVELESUS",
+        component: PageGGBGTATROUVELESUS
+    },
+    {
+        path: "/CoffeeShop",
+        name: "PageCoffeeShop",
+        component: PageCoffeeShop
+    },
+    {
+        path: "/premiers",
+        name: "PagePrems",
+        component: PagePrems
+    },
+    {
+        path: "/504",
+        name: "Page504A",
+        component: Page504A
     },
 ];
 
