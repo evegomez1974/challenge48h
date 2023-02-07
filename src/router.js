@@ -3,6 +3,7 @@ import PageAccueil from './components/Accueil.vue';
 import EnigmeCastle from './components/EnigmeCastle.vue';
 import CastleWalls from './components/CastleWalls.vue';
 import TreasuresRoom from './components/TreasureRoom.vue';
+import PierrePhilosophale from './components/PierrePhilosophale.vue';
 import Developpement from './components/Developpment.vue';
 import PageFindmdp from './components/Findmdp.vue';
 import Cybersecurite from './components/Cybersecurite.vue';
@@ -40,6 +41,11 @@ const routes =[
         path: "/TreasuresRoom",
         name: "TreasuresRoom",
         component: TreasuresRoom
+    },
+    {
+        path: "/Castle/ProfesseurYnofou/PierrePhilosophale",
+        name: "PierrePhilosophale",
+        component: PierrePhilosophale
     },
     
     // cyber
