@@ -50,7 +50,7 @@ export default {
             showMessageIncorrect: false,
             showMessageCorrect: false,
             
-            tableauActions : Array.from({length: 40}, () => Math.floor(Math.random() * 250 +1)),
+            tableauActions : Array.from({length: 150}, () => Math.floor(Math.random() * 250 +1)),
         };
     },
     methods: {
